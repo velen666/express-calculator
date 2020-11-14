@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css" type="text/css">
+    <script src="node_modules\jquery\dist\jquery.min.js"></script>
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="main">
+        <div class="content">
+            <div class="container">
+                <form class="form-calculator" action="/calculator" name="calculatorForm" method="post">
+
+                    <div class="form-group">
+                        <h3 class="form-title">Заслонка</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Управление</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="managmentRadio">
+                                    <label for="discretRadio">Дискретное</label>
+                                </div>
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="managmentRadio">
+                                    <label for="analogRadio">Аналоговое</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Контроль открытия</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="openingControlRadio">
+                                    <label for="openingControlRadioTrue">Есть</label>
+                                </div>
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="openingControlRadio">
+                                    <label for="openingControlRadioFalse">Нет</label>
+                                </div>
+                            </div>
+                        </div>    
+                    </div>
+
+                    <div class="form-group">
+                        <h3 class="form-title">Вентилятор</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Мощность</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-input-input" type="text" name="ventilatorPowerRadio">
+                                    <label for="ventilatorPowerRadio">кВт</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Управление</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="ventilatorManagment">
+                                    <label for="ventilatorManagmentDirectStart">Прямой пуск</label>
+                                </div>
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="ventilatorManagment">
+                                    <label for="ventilatorManagmentFrequencyConverter">Преобразователь частоты</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3 class="form-title">Фильтра</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Количество</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-input-input" type="text" name="filterQantity">
+                                    <label for="filterQantity">шт</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Сигналы</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="filterSignal">
+                                    <label for="filterSignalDivided">Разделены</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="filterSignal">
+                                    <label for="filterSignalUnited">Объеденины</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3 class="form-title">Общие</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Корпус</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="generalBodyType">
+                                    <label for="generalBodyTypePlast">Пластик</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="generalBodyType">
+                                    <label for="generalBodyTypeMetall">Металл</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Доп. опции</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="checkbox" name="generalDop">
+                                    <label for="generalDopFireAlarm">Сигнал пожар</label>
+                                </div>
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="checkbox" name="generalDop">
+                                    <label for="generalDopLED">LED-индикация</label>
+                                </div>
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="checkbox" name="generalDop">
+                                    <label Диспетчеризация for="generalDopDispatchingSistem">Диспетчеризация</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3 class="form-title">Нагреватель</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Тип</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="heaterType">
+                                    <label for="heaterTypeWater">Водяной</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="heaterType">
+                                    <label for="heaterTypeElectric">Электрический</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <h3 class="form-title">Охладитель</h3>
+
+                        <div class="form-block-group">
+                            <h4 class="form-block-title">Тип</h4>
+                            <div class="form-fields-container">
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="coolerType">
+                                    <label for="coolerTypeNone">Нет</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="coolerType">
+                                    <label for="coolerTypeWater">Водяной</label>
+                                </div>
+
+                                <div class="form-field">
+                                    <input class="form-radio-input" type="radio" name="coolerType">
+                                    <label for="coolerTypeFrion">Фреоновый</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="js\index.js"></script>
+</body>
+</html>

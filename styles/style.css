@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; /* просто чтобы был отступ */
+}
+
+.form-calculator {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    max-width: 1200px;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.form-group {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group:nth-child(n+4) {
+    margin-top: 15px;
+}
+ 
+.form-block-group {
+    display: flex;
+    align-items: center;
+}
+
+.form-block-group + .form-block-group {
+    margin-top: 10px;
+}
+
+.form-title {
+    text-align: center;
+    margin-bottom: 5px;
+    color: rgb(129, 8, 8);
+}
+
+.form-block-title {
+    width: 86px;
+    color: rgb(12, 12, 189);
+    margin-right: 10px;
+}
+
+.form-input-input {
+    padding: 5px;
+    width: 40px;
+    height: 30px;
+    text-align: center;
+}
+
+.form-field {
+    display: flex;
+    align-items: baseline;
+}
+
+.form-field > label {
+    width: 120px;
+    margin-left: 5px;
+}
+
+#submit {
+    margin-top: 30px;
+}
+
+@media all and (min-width: 960px) and (max-width: 1199px) {
+    .container {
+        margin: 40px 20px;
+    }
+
+    .form-calculator {
+        max-width: 900px;
+    }
+
+    .form-group {
+        width: 33%;
+    }
+
+    .form-group:nth-child(n+4) {
+        margin-top: 15px;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 959px) {
+    .container {
+        margin: 30px 20px;
+    }
+
+    .form-calculator {
+        max-width: 700px;
+    }
+
+    .form-group {
+        width: 47%;
+    }
+
+    .form-group:nth-child(n+3) {
+        margin-top: 10px;
+    }
+}
+
+@media all and (min-width: 480px) and (max-width: 767px) {
+    .container {
+        margin: 30px 15px;
+    }
+
+    .form-calculator {
+        max-width: 400px;
+    }
+
+    .form-group {
+        width: 100%;
+
+    }
+}
+
+@media all and (max-width: 479px) {
+    .container {
+        margin: 20px 10px;
+    }
+
+    .form-calculator {
+        max-width: 440px;
+        min-width: 300px;
+    }
+
+    .form-group {
+        width: 100%;
+    }
+
+    .form-group:not(:first-child) {
+        margin-top: 10px;
+    }
+
+}
